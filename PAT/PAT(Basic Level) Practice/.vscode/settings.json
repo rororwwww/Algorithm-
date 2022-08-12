@@ -8,6 +8,8 @@
         "map": "cpp",
         "stack": "cpp",
         "complex": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "ios": "cpp",
+        "iterator": "cpp"
     }
 }
