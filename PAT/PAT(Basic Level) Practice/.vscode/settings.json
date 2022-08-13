@@ -10,6 +10,9 @@
         "complex": "cpp",
         "queue": "cpp",
         "ios": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp",
+        "iomanip": "cpp"
     }
 }
