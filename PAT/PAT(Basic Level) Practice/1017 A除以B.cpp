@@ -14,12 +14,6 @@ int main(int argc, char const *argv[])
 
     int yu = 0;
     
-    if (((s[0] - '0')/ i == 0) && s.size() == 1)
-    {
-        cout << 0 << " " <<  s[0] - '0' << endl;
-        return 0;
-    }
-    
     for (size_t n = 0; n < s.size(); n++)
     {
         int num = yu * 10 + (s[n] - '0');
@@ -33,7 +27,7 @@ int main(int argc, char const *argv[])
         ret += c;
     }
 
-    if (ret[0] == '0')
+    if (ret[0] == '0' && ret.size() > 1)
     {
         ret.erase(ret.begin());
     }
