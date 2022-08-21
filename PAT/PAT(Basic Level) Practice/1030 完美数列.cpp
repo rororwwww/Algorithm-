@@ -26,9 +26,20 @@ int main(int argc, char const *argv[])
     for (size_t i = 0; i < v.size(); i++)
     {
         
-        int sum= 0; 
+        int sum= 0;
 
-        for (size_t k = i; k < count; k++)
+        if ( i + max > v.size() )
+        {
+            continue;
+        }
+        
+
+        if ( v[i + max] > v[i] * p )
+        {
+            continue;
+        }
+
+        for (size_t k = i; k < v.size(); k++)
         {
             
             if (v[k] > v[i] * p)
