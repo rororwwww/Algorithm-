@@ -28,13 +28,7 @@ int main(int argc, char const *argv[])
         
         int sum= 0;
 
-        if ( i + max > v.size() )
-        {
-            continue;
-        }
-        
-
-        if ( v[i + max] > v[i] * p )
+        if ( i + max > v.size() ||v[i + max] > v[i] * p )
         {
             continue;
         }
