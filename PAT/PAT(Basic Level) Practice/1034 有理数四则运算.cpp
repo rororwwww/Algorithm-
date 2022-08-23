@@ -14,8 +14,8 @@ void coutFraction(fraction ret1)
 
     long long int a,b,t;
 
-    a = abs(ret1.numerator);
-    b = abs(ret1.denominator);
+    a = labs(ret1.numerator);
+    b = labs(ret1.denominator);
 
     while(b!=0){
         t=a;
@@ -70,13 +70,13 @@ fraction toFormat(fraction ret1)
 
     if (ret1.denominator < 0)
     {
-        ret1.denominator = abs(ret1.denominator);
+        ret1.denominator = labs(ret1.denominator);
         ret1.numerator = -ret1.numerator;
     }
 
     if (ret1.k < 0)
     {
-        ret1.numerator = abs(ret1.numerator);
+        ret1.numerator = labs(ret1.numerator);
     }
 
     return ret1;
@@ -91,8 +91,8 @@ fraction doFunc(fraction f1, fraction f2, bool isAdd)
 
     long long int lcm;
 
-    a = abs(f1.denominator);
-    b = abs(f2.denominator);
+    a = labs(f1.denominator);
+    b = labs(f2.denominator);
 
     while(b!=0){
         t=a;
