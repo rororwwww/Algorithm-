@@ -51,14 +51,12 @@ int main(int argc, char const *argv[])
         
     }
 
-    if (v.size() != 0)
-    {
-        cout << v.size() << endl;
-    } else {
-        cout << "0" << endl;
-        cout << endl;
-    }
+    cout << v.size() << endl;
     
+    if (v.size() == 0)
+    {
+        cout << endl;
+    }   
     
     sort(v.begin(), v.end());
     
