@@ -113,9 +113,6 @@ int main(int argc, char const *argv[])
         }
     }
 
-    int wrong = 0;
-    int question;
-
     sort(Wrong.begin(), Wrong.end(), compare);
 
     for (size_t i = 0; i < StudentCount; i++)
