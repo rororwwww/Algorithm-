@@ -1,8 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int GCD(int a, int b){
-    return b == 0 ? a : GCD(b, a % b);
+int gcd(int a, int b){
+    return b == 0 ? a : gcd(b, a % b);
+}
+
+//求a,b,c的最小公倍数
+int lcm(int a, int b, int c)
+{
+    int m1 = a / gcd(a, b) * b;
+    int m2 = b / gcd(b, c) * c;
+    return m1 / gcd(m1, m2) * m2;
 }
 
 int main(int argc, char const *argv[])
@@ -27,11 +35,13 @@ int main(int argc, char const *argv[])
     }
     bool first = true;
 
-    for (size_t i = n1 * m2 * k + 1; i < n2 * m1 * k; i++)
+    int l = lcm(m1,m2,k);
+
+    for (size_t i = n1 * l / m1 + 1; i < n2 * l / m2; i++)
     {
-        if (i % (m1 * m2) == 0)
+        if (i % (l / k) == 0)
         {
-            if (GCD(i / (m1 * m2), k) != 1)
+            if (gcd(i / (l / k), k) != 1)
             {
                 continue;
             }
@@ -41,7 +51,7 @@ int main(int argc, char const *argv[])
                 cout << " ";
             }
 
-            cout << i / (m1 * m2) << "/" << k;
+            cout << i / (l / k) << "/" << k;
             first = false;
         }
     }
