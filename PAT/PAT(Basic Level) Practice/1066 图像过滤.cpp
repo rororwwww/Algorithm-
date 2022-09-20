@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
         for (size_t i = 0; i < n; i++)
         {
             int n;
-            cin >> n;
+            scanf("%d", &n);
 
             if (i != 0)
             {
