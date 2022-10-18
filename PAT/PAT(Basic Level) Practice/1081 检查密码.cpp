@@ -3,8 +3,6 @@
 
 using namespace std;
 
-
-
 void checkpassword(string passwd)
 {
     do
@@ -20,7 +18,7 @@ void checkpassword(string passwd)
 
         for (size_t i = 0; i < passwd.length(); i++)
         {
-            
+
             if (!(isalnum(passwd[i])) && (passwd[i] != '.'))
             {
                 cout << "Your password is tai luan le." << endl;
@@ -31,12 +29,11 @@ void checkpassword(string passwd)
             {
                 hasAlpha = true;
             }
-            
+
             if (isdigit(passwd[i]))
             {
                 hasNum = true;
             }
-            
         }
 
         if (!hasAlpha)
@@ -50,8 +47,7 @@ void checkpassword(string passwd)
             cout << "Your password needs shu zi." << endl;
             break;
         }
-        
-        
+
         cout << "Your password is wan mei." << endl;
 
     } while (0);
