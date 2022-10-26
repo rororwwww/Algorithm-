@@ -71,6 +71,7 @@
         "__functional_base": "cpp",
         "functional": "cpp",
         "utility": "cpp",
-        "strstream": "cpp"
+        "strstream": "cpp",
+        "set": "cpp"
     }
 }
